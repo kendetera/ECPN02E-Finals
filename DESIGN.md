@@ -271,7 +271,9 @@ The Save confirmation every form promises. Centered tile, 3px corners, max 400px
 - **Do** keep oxblood for the rail and primary action, ochre for today, focus and the selected item, slate for data.
 - **Do** set money and counts heavy (800) with proportional lining figures, right-aligned in tables.
 - **Do** keep controls at 44px minimum for touch.
-- **Do** respect reduced motion: all animation and transition are removed under `prefers-reduced-motion`.
+- **Do** respect reduced motion: under `prefers-reduced-motion` every spatial or reveal animation is removed (pattern bloom and lay, bar rise, page rise, check draw, drawer slide, button press); colour feedback stays (150ms nav fades, the POS cart glow) and the pop-up keeps a 150ms fade.
+- **Do** lay a patterned band in whole tiles: the lay steps by exactly one tile width (`--lay-tile` × `--lay-count`), never by a percentage of the band.
+- **Do** start entrances from an already-visible state: a page change rises from opacity .65, never from blank.
 
 ### Don't:
 - **Don't** round corners past 3px on tiles, buttons, inputs or nav.

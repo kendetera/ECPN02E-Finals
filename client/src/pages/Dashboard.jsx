@@ -79,7 +79,9 @@ export default function Dashboard() {
               {(data?.week ?? Array.from({ length: 7 }, () => null)).map((d, i) => (
                 <div key={d?.date ?? i} className={`day${i === 6 ? ' today' : ''}`}>
                   <span className="day-amount">{d ? wholePeso(d.total) : ''}</span>
-                  <div className="day-bar"><i style={{ height: d ? `${(d.total / max) * 100}%` : '0%' }} /></div>
+                  <div className="day-bar">
+                    {d && <i style={{ height: `${(d.total / max) * 100}%`, '--i': i }} />}
+                  </div>
                   <span className="day-name">{d ? (i === 6 ? 'Today' : dayName(d.date)) : ''}</span>
                 </div>
               ))}
