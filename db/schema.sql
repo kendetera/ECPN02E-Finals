@@ -81,3 +81,11 @@ alter table users enable row level security;
 alter table payroll enable row level security;
 alter table sales enable row level security;
 alter table sale_items enable row level security;
+
+-- Let the server's secret key (service_role) use the tables. Newer Supabase projects
+-- do not grant this automatically. anon/authenticated get nothing.
+grant usage on schema public to service_role;
+grant all on all tables in schema public to service_role;
+grant all on all sequences in schema public to service_role;
+alter default privileges in schema public grant all on tables to service_role;
+alter default privileges in schema public grant all on sequences to service_role;
