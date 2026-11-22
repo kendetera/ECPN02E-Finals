@@ -332,8 +332,9 @@ td.empty { text-align: center; padding: var(--s6) var(--s3); display: table-cell
 @property --lay { syntax: '<length>'; inherits: false; initial-value: 0px; }
 .patterned::before {
   --lay-tile: 40px; --lay-count: 36;
+  --lay: 10000px; /* resting value: once laid (or when motion is off) the band is never clipped */
   clip-path: inset(0 calc(100% - var(--lay)) 0 0);
-  animation: lay .7s steps(var(--lay-count), jump-end) .06s both;
+  animation: lay 1.3s steps(var(--lay-count), jump-end) .06s backwards; /* ~36ms per tile */
 }
 .login-tile.patterned::before { --lay-tile: 96px; --lay-count: 5; animation-duration: .5s; animation-delay: .12s; }
 .summary .patterned::before { --lay-tile: 26px; --lay-count: 10; animation-duration: .4s; }
