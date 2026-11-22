@@ -8,6 +8,7 @@ import userRoutes from './routes/users.js';
 import employeeRoutes from './routes/employees.js';
 import payrollRoutes from './routes/payroll.js';
 import salesRoutes from './routes/sales.js';
+import dashboardRoutes from './routes/dashboard.js';
 
 const app = express();
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -23,6 +24,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/employees', employeeRoutes);
 app.use('/api/payroll', payrollRoutes);
 app.use('/api/sales', salesRoutes);
+app.use('/api/dashboard', dashboardRoutes);
 app.use('/api', (_req, res) => res.status(404).json({ error: 'Not found' }));
 
 // Serve the built React app; any other path returns index.html (client-side routing).

@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { X } from 'lucide-react';
 import { api, peso } from '../api.js';
 import Modal from '../components/Modal.jsx';
+import PageHead from '../components/PageHead.jsx';
 
 // PLACEHOLDER POS. It works end to end (cart -> checkout -> saved sale shown in the
 // Sales Report), but will be replaced by the 5 prelim POS pages once they are found.
@@ -42,8 +44,7 @@ export default function Pos() {
 
   return (
     <section>
-      <h1>POS</h1>
-      <p className="muted">Placeholder register: to be replaced with the prelim POS pages.</p>
+      <PageHead title="POS">Tap items to add them, enter the cash received, then check out. Each sale gets an OR number.</PageHead>
       <div className="pos">
         <div className="products">
           {SAMPLE_PRODUCTS.map((p) => (
@@ -53,25 +54,29 @@ export default function Pos() {
             </button>
           ))}
         </div>
-        <div className="card cart">
+        <div className="card cart patterned">
           <h2>Cart</h2>
-          {cart.length === 0 && <p className="muted">No items yet.</p>}
+          {cart.length === 0 && <p className="muted">No items yet. Tap a product to add it.</p>}
           {cart.map((i) => (
             <div key={i.name} className="cart-line">
               <span>{i.quantity} × {i.name}</span>
-              <span>{peso(i.price * i.quantity)}</span>
-              <button className="link" onClick={() => remove(i.name)} aria-label={`Remove ${i.name}`}>✕</button>
+              <span className="num">{peso(i.price * i.quantity)}</span>
+              <button className="icon-btn" onClick={() => remove(i.name)} aria-label={`Remove ${i.name}`}><X size={18} aria-hidden="true" /></button>
             </div>
           ))}
           <div className="cart-total"><span>Total</span><strong>{peso(total)}</strong></div>
           <label className="field">
-            <span>Cash received</span>
-            <input type="number" min="0" step="0.01" value={cash} onChange={(e) => setCash(e.target.value)} />
+            <span>Cash received (₱)</span>
+            <input type="number" inputMode="decimal" min="0" step="0.01" value={cash} onChange={(e) => setCash(e.target.value)} />
           </label>
-          {cash !== '' && <div className="cart-total"><span>Change</span><strong>{peso(change)}</strong></div>}
-          {error && <p className="error">{error}</p>}
+          {cash !== '' && (
+            <div className={`cart-total change${change < 0 ? ' short' : ''}`}>
+              <span>{change < 0 ? 'Short by' : 'Change'}</span><strong>{peso(Math.abs(change))}</strong>
+            </div>
+          )}
+          {error && <p className="error" role="alert">{error}</p>}
           <div className="actions">
-            <button onClick={checkout} disabled={!cart.length || change < 0}>Checkout</button>
+            <button onClick={checkout} disabled={!cart.length || cash === '' || change < 0}>Checkout</button>
             <button className="secondary" onClick={() => { setCart([]); setCash(''); }}>Cancel</button>
           </div>
         </div>

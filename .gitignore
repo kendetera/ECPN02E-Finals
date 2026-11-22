@@ -9,3 +9,6 @@ client/dist/
 
 # empty clone of the repo (not part of the project)
 ECPN02E-Finals/
+
+# impeccable working files (decision payloads)
+.impeccable/decision/

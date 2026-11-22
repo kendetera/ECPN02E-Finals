@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { api } from '../api.js';
 import Field from '../components/Field.jsx';
 import Modal from '../components/Modal.jsx';
+import PageHead from '../components/PageHead.jsx';
 
 const EMPTY = {};
 
@@ -62,8 +63,8 @@ export default function UserAccount() {
 
   return (
     <section>
-      <h1>User Account</h1>
-      <form className="card form-grid" onSubmit={save}>
+      <PageHead title="User Account">Type a username and press Find to edit or delete that account, or fill in a new one and Save.</PageHead>
+      <form className="card form-grid patterned" onSubmit={save}>
         <div className="field-with-button span-all">
           <Field label="Username" name="username" required readOnly={!!loaded} {...f} />
           <button type="button" className="secondary" onClick={find} disabled={!!loaded}>Find</button>

@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-22T12:00:00Z",
+  "title": "Design System: SukiMart",
+  "extensions": {
+    "colorMeta": {
+      "oxblood": { "role": "primary", "displayName": "Oxblood", "canonical": "#7a2a26", "tonalRamp": ["#2a0e0c", "#45201a", "#5e1f1c", "#7a2a26", "#93413b", "#b9776f", "#dcb5ae", "#f6e7e3"] },
+      "oxblood-deep": { "role": "primary", "displayName": "Oxblood Deep", "canonical": "#5e1f1c", "tonalRamp": ["#1e0907", "#33120f", "#4a1815", "#5e1f1c", "#7a2a26", "#a5615a", "#d2a7a1", "#f3e4e1"] },
+      "oxblood-lit": { "role": "primary", "displayName": "Oxblood Lit", "canonical": "#93413b", "tonalRamp": ["#2e100d", "#4f1d19", "#6e2b26", "#93413b", "#ad6660", "#c98f89", "#e2c0bc", "#f7e9e7"] },
+      "ochre": { "role": "secondary", "displayName": "Ochre", "canonical": "#c98a2b", "tonalRamp": ["#3a2507", "#5c3c0d", "#8a5a12", "#ad731f", "#c98a2b", "#dcaa5d", "#ecd09f", "#f9eedb"] },
+      "ochre-ink": { "role": "secondary", "displayName": "Ochre Ink", "canonical": "#8a5a12", "tonalRamp": ["#2b1b04", "#4a3009", "#6a450e", "#8a5a12", "#ad7a2c", "#cca05e", "#e5cb9e", "#f8eedb"] },
+      "slate": { "role": "tertiary", "displayName": "Slate", "canonical": "#3c4f5c", "tonalRamp": ["#12191e", "#22303a", "#2f3f4b", "#3c4f5c", "#5c707d", "#8797a2", "#c9d1d6", "#eef1f3"] },
+      "slate-soft": { "role": "tertiary", "displayName": "Slate Soft", "canonical": "#c9d1d6", "tonalRamp": ["#1f272c", "#3c4a53", "#5d6d78", "#8090a0", "#a5b2bb", "#c9d1d6", "#dfe4e7", "#f2f4f5"] },
+      "tile": { "role": "neutral", "displayName": "Limewash Tile", "canonical": "#f3efe7", "tonalRamp": ["#2a2621", "#4a443c", "#70685d", "#998f81", "#c2b8a9", "#e4dfd7", "#f3efe7", "#fbf9f5"] },
+      "grout": { "role": "neutral", "displayName": "Grout", "canonical": "#e4dfd7", "tonalRamp": ["#28241f", "#47413a", "#6b645a", "#938a7e", "#bcb3a6", "#d6cec3", "#e4dfd7", "#f5f2ee"] },
+      "line": { "role": "neutral", "displayName": "Joint Line", "canonical": "#d6cec3", "tonalRamp": ["#27221d", "#463f37", "#6a6156", "#928778", "#b9ae9f", "#d6cec3", "#e6e0d8", "#f6f3ef"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#1f1b18", "tonalRamp": ["#1f1b18", "#3a332e", "#554c45", "#645a52", "#8b8178", "#b0a79f", "#d6d0ca", "#f4f1ee"] },
+      "muted": { "role": "neutral", "displayName": "Worn Ink", "canonical": "#645a52", "tonalRamp": ["#201c19", "#3a342f", "#4f4740", "#645a52", "#8b8178", "#ada49c", "#d1cbc5", "#f2efec"] },
+      "on-oxblood": { "role": "neutral", "displayName": "On Oxblood", "canonical": "#f6e7e3", "tonalRamp": ["#2e1a17", "#53332e", "#7a524b", "#a1776f", "#c59e96", "#dcb5ae", "#f6e7e3", "#fdf7f5"] },
+      "on-oxblood-muted": { "role": "neutral", "displayName": "On Oxblood Muted", "canonical": "#dcb5ae", "tonalRamp": ["#2b1714", "#4e2c27", "#71433c", "#965f56", "#ba8a82", "#dcb5ae", "#ecd5d1", "#faf0ee"] },
+      "danger": { "role": "neutral", "displayName": "Danger Red", "canonical": "#a3261f", "tonalRamp": ["#2f0907", "#52110d", "#7a1b16", "#a3261f", "#c4544c", "#dc8b85", "#efc6c2", "#fbeeec"] },
+      "ok": { "role": "neutral", "displayName": "Ledger Green", "canonical": "#2f6b4a", "tonalRamp": ["#0c1f15", "#163a27", "#225338", "#2f6b4a", "#4f8d6a", "#7fb095", "#b8d4c4", "#e6f0ea"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display figure", "purpose": "The headline amount on the patterned dashboard tile, in oxblood, lining figures." },
+      "headline": { "displayName": "Page title", "purpose": "h1 on every page; 1.5rem under 900px; login uses 2.125rem." },
+      "figure": { "displayName": "Stat figure", "purpose": "Counts and amounts in stat tiles; proportional lining figures." },
+      "title": { "displayName": "Panel title", "purpose": "h2 panel headings." },
+      "body": { "displayName": "Body", "purpose": "Running text; tables at 0.875rem." },
+      "label": { "displayName": "Label", "purpose": "Field and tile labels, sentence case, muted." },
+      "table-head": { "displayName": "Table head", "purpose": "Uppercase column headers only." }
+    },
+    "shadows": [
+      { "name": "popup-lift", "value": "0 24px 60px -20px rgb(31 27 24 / .55)", "purpose": "The Save / confirm modal, the one floating layer on desktop." },
+      { "name": "drawer-edge", "value": "12px 0 40px -12px rgb(31 27 24 / .5)", "purpose": "The open phone navigation drawer." },
+      { "name": "pattern-frame", "value": "inset 0 0 0 3px #7a2a26", "purpose": "Inlaid 3px oxblood frame around the one patterned element; not depth." },
+      { "name": "focus-glow", "value": "0 0 0 3px rgb(201 138 43 / .35)", "purpose": "Focused input fields." }
+    ],
+    "motion": [
+      { "name": "ease-control", "value": "150ms ease-out", "purpose": "Button and input colour, border and shadow transitions." },
+      { "name": "ease-settle", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Drawer slide (280ms), modal rise (280ms), week bar growth (600ms)." },
+      { "name": "fade", "value": "180ms ease-out", "purpose": "Modal backdrop fade-in." },
+      { "name": "reduced-motion", "value": "none", "purpose": "All animation and transition removed under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "phone", "value": "560px" },
+      { "name": "drawer", "value": "900px" },
+      { "name": "stack", "value": "1180px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Oxblood solid action: Save, Open POS, Search, OK.",
+      "html": "<button class=\"ds-btn-primary\">Save</button>",
+      "css": ".ds-btn-primary { font-family: 'Schibsted Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 0.9375rem; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 3px; border: 1px solid #7a2a26; background: #7a2a26; color: #fff; cursor: pointer; transition: background-color .15s ease-out, border-color .15s ease-out; } .ds-btn-primary:hover { background: #5e1f1c; border-color: #5e1f1c; } .ds-btn-primary:focus-visible { outline: 2px solid #c98a2b; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Tile-coloured action: Cancel, Register employee, Find.",
+      "html": "<button class=\"ds-btn-secondary\">Cancel</button>",
+      "css": ".ds-btn-secondary { font-family: 'Schibsted Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 0.9375rem; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 16px; border-radius: 3px; border: 1px solid #d6cec3; background: #f3efe7; color: #1f1b18; cursor: pointer; transition: background-color .15s ease-out, border-color .15s ease-out; } .ds-btn-secondary:hover { background: #fff; border-color: #3c4f5c; } .ds-btn-secondary:focus-visible { outline: 2px solid #c98a2b; outline-offset: 2px; }"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Destructive action, used for Delete and its confirmation.",
+      "html": "<button class=\"ds-btn-danger\">Yes, delete</button>",
+      "css": ".ds-btn-danger { font-family: 'Schibsted Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 0.9375rem; min-height: 44px; padding: 0 16px; border-radius: 3px; border: 1px solid #a3261f; background: #f3efe7; color: #a3261f; cursor: pointer; transition: background-color .15s ease-out; } .ds-btn-danger:hover { background: #fbeeec; } .ds-btn-danger:focus-visible { outline: 2px solid #c98a2b; outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labelled white input well with ochre focus glow.",
+      "html": "<label class=\"ds-field\"><span>Username</span><input class=\"ds-input\" placeholder=\"e.g. maria\"></label>",
+      "css": ".ds-field { display: grid; gap: 6px; font-family: 'Schibsted Grotesk', system-ui, sans-serif; } .ds-field > span { font-size: 0.875rem; font-weight: 650; color: #645a52; } .ds-input { font: inherit; min-height: 44px; padding: 0 12px; color: #1f1b18; background: #fff; border: 1px solid #d6cec3; border-radius: 3px; transition: border-color .15s ease-out, box-shadow .15s ease-out; } .ds-input::placeholder { color: #8b8178; } .ds-input:hover { border-color: #b9ae9f; } .ds-input:focus { outline: none; border-color: #7a2a26; box-shadow: 0 0 0 3px rgb(201 138 43 / .35); }"
+    },
+    {
+      "name": "Sidebar Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link-active",
+      "description": "Oxblood rail with grouped links; active item on oxblood-lit with an ochre icon.",
+      "html": "<nav class=\"ds-rail\"><div class=\"ds-rail-group\">Reports</div><a class=\"ds-rail-link ds-active\" href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M3 3v18h18M7 16v-4M12 16V8M17 16v-6\"/></svg><span>Sales Report</span></a><a class=\"ds-rail-link\" href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\"/><path d=\"M8 13h8M8 17h8\"/></svg><span>Payroll Report</span></a></nav>",
+      "css": ".ds-rail { background: #7a2a26; color: #f6e7e3; padding: 12px; width: 264px; font-family: 'Schibsted Grotesk', system-ui, sans-serif; } .ds-rail-group { padding: 12px 12px 6px; font-size: 0.75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #dcb5ae; } .ds-rail-link { display: flex; align-items: center; gap: 12px; min-height: 42px; padding: 0 12px; border-radius: 3px; color: #f6e7e3; opacity: .82; text-decoration: none; font-size: 0.9375rem; font-weight: 550; } .ds-rail-link svg { color: #dcb5ae; } .ds-rail-link:hover { opacity: 1; background: rgb(255 255 255 / .07); } .ds-rail-link:focus-visible { outline: 2px solid #c98a2b; outline-offset: 2px; } .ds-rail-link.ds-active { opacity: 1; background: #93413b; color: #fff; font-weight: 750; } .ds-rail-link.ds-active svg { color: #c98a2b; }"
+    },
+    {
+      "name": "Role Chip",
+      "kind": "chip",
+      "refersTo": "role-chip",
+      "description": "Ochre role marker beside the username in the rail foot.",
+      "html": "<span class=\"ds-role\">admin</span>",
+      "css": ".ds-role { font-family: 'Schibsted Grotesk', system-ui, sans-serif; font-size: 0.6875rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 2px 6px; border-radius: 2px; background: #c98a2b; color: #1f1b18; }"
+    },
+    {
+      "name": "Stat Tiles on Grout",
+      "kind": "card",
+      "refersTo": "tile",
+      "description": "Tiles laid in a 4px grout grid, each with the quarter-motif corner.",
+      "html": "<div class=\"ds-tiles\"><div class=\"ds-tile\"><span class=\"ds-tile-label\">Receipts today</span><strong class=\"ds-fig\">64</strong></div><div class=\"ds-tile\"><span class=\"ds-tile-label\">Payroll this month</span><strong class=\"ds-fig\">&#8369;48,210.40</strong></div></div>",
+      "css": ".ds-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: #d6cec3; border: 4px solid #d6cec3; border-radius: 3px; font-family: 'Schibsted Grotesk', system-ui, sans-serif; } .ds-tile { position: relative; overflow: hidden; background: #f3efe7; padding: 24px; min-height: 148px; display: flex; flex-direction: column; justify-content: space-between; color: #1f1b18; } .ds-tile::after { content: ''; position: absolute; top: 0; right: 0; width: 40px; height: 40px; background: radial-gradient(circle at 100% 0, #c98a2b 0 21px, transparent 22px), radial-gradient(circle at 100% 0, transparent 0 27px, #3c4f5c 28px 30px, transparent 31px); } .ds-tile-label { font-size: 0.875rem; font-weight: 700; color: #645a52; } .ds-fig { font-size: 1.875rem; font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: lining-nums; white-space: nowrap; }"
+    },
+    {
+      "name": "Patterned Band",
+      "kind": "custom",
+      "description": "The one full-pattern element per screen: a 40px motif strip under a 3px oxblood rule, framed in oxblood.",
+      "html": "<div class=\"ds-patterned\"><h2 class=\"ds-pt-title\">Employee Registration</h2><p class=\"ds-pt-body\">Every field saves to the database.</p></div>",
+      "css": ".ds-patterned { position: relative; background: #f3efe7; border: 4px solid #d6cec3; border-radius: 3px; box-shadow: inset 0 0 0 3px #7a2a26; padding: 64px 24px 24px; font-family: 'Schibsted Grotesk', system-ui, sans-serif; color: #1f1b18; } .ds-patterned::before { content: ''; position: absolute; left: 3px; right: 3px; top: 3px; height: 40px; border-bottom: 3px solid #7a2a26; background: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f3efe7'/%3E%3Cg fill='%23c98a2b'%3E%3Ccircle r='44'/%3E%3Ccircle cx='200' r='44'/%3E%3Ccircle cy='200' r='44'/%3E%3Ccircle cx='200' cy='200' r='44'/%3E%3C/g%3E%3Cg fill='none' stroke='%233c4f5c' stroke-width='6'%3E%3Ccircle r='60'/%3E%3Ccircle cx='200' r='60'/%3E%3Ccircle cy='200' r='60'/%3E%3Ccircle cx='200' cy='200' r='60'/%3E%3C/g%3E%3Ccircle cx='100' cy='100' r='58' fill='none' stroke='%237a2a26' stroke-width='6'/%3E%3Cpath d='M100 50 150 100 100 150 50 100Z' fill='%237a2a26'/%3E%3Cpath d='M100 74 126 100 100 126 74 100Z' fill='%23f3efe7'/%3E%3Ccircle cx='100' cy='100' r='12' fill='%23c98a2b'/%3E%3Cg fill='%233c4f5c'%3E%3Ccircle cx='100' cy='18' r='7'/%3E%3Ccircle cx='182' cy='100' r='7'/%3E%3Ccircle cx='100' cy='182' r='7'/%3E%3Ccircle cx='18' cy='100' r='7'/%3E%3C/g%3E%3C/svg%3E\") repeat-x left center / 40px; } .ds-pt-title { margin: 0; font-size: 1.0625rem; font-weight: 750; } .ds-pt-body { margin: 6px 0 0; color: #645a52; }"
+    },
+    {
+      "name": "Saved Pop-up",
+      "kind": "custom",
+      "description": "The confirmation modal every Save shows.",
+      "html": "<div class=\"ds-modal\"><span class=\"ds-modal-icon\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/></svg></span><p>Employee saved.</p><button class=\"ds-modal-ok\">OK</button></div>",
+      "css": ".ds-modal { background: #f3efe7; border-radius: 3px; padding: 32px 24px 24px; width: 320px; display: grid; justify-items: center; gap: 16px; text-align: center; box-shadow: 0 24px 60px -20px rgb(31 27 24 / .55); font-family: 'Schibsted Grotesk', system-ui, sans-serif; color: #1f1b18; } .ds-modal p { margin: 0; font-size: 1.0625rem; font-weight: 600; } .ds-modal-icon { width: 56px; height: 56px; display: grid; place-items: center; border-radius: 50%; background: #e6f0ea; color: #2f6b4a; } .ds-modal-ok { width: 100%; font: inherit; font-weight: 700; min-height: 44px; border-radius: 3px; border: 1px solid #7a2a26; background: #7a2a26; color: #fff; cursor: pointer; } .ds-modal-ok:hover { background: #5e1f1c; } .ds-modal-ok:focus-visible { outline: 2px solid #c98a2b; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Cement-Tile Floor",
+    "overview": "The store's Machuca-style cement-tile floor is the system. Every panel is a square tile of warm limewash (tile) set into a lighter mortar ground (grout), separated by a visible 4px grout joint and finished with one-pixel rules. An oxblood rail runs down the left like the store's painted wainscot. The floor pattern itself, an ochre-slate-oxblood four-fold medallion, is drawn once in `TileMotif.jsx` and in the `--motif` data URI, and is cropped two ways: a quarter-disc in the corner of ordinary tiles, and the full repeat on exactly one element per screen.\n\nDensity is a working back office's: compact tables, 44px controls, clear labels in the brief's own words. Colour is pigment, not decoration: oxblood is the store's voice and primary action, ochre marks the live or selected thing (today, focus, the active icon), slate carries data. Depth is almost entirely grout and tone; shadows exist only for things that float above the floor (the pop-up and the phone drawer).\n\nThe system refuses the generic white-card admin template: no floating white cards on gray, no soft drop shadows on panels, no rounded 12px pills.",
+    "keyCharacteristics": [
+      "Square tiles on a 4px grout joint; corners never past 3px.",
+      "One full-pattern element per screen; every other tile shows only the quarter-motif corner.",
+      "Oxblood rail and primary action; ochre for the live thing; slate for data.",
+      "One grotesque (Schibsted Grotesk, self-hosted variable 400–900), heavy for figures.",
+      "Flat floor; shadow only on floating layers."
+    ],
+    "rules": [
+      { "name": "The Pigment Roles Rule", "body": "Oxblood speaks for the store and the primary action; ochre marks the one live or selected thing; slate carries data. Never swap roles: a slate button or an ochre primary action is off-system.", "section": "colors" },
+      { "name": "The No-White-Card Rule", "body": "Panels are tile (`#f3efe7`) on a grout joint, never white cards on gray. White is reserved for input wells and hover lift.", "section": "colors" },
+      { "name": "The Lining Figures Rule", "body": "Money and counts use the grotesque's own proportional lining figures (`font-variant-numeric: lining-nums`), never tabular. Right-alignment in table `num` columns does the aligning; the figures keep their natural widths.", "section": "typography" },
+      { "name": "The One Family Rule", "body": "Schibsted Grotesk at varied weight is the whole type system. Hierarchy comes from weight and size, not from a second face.", "section": "typography" },
+      { "name": "The Flat Floor Rule", "body": "Tiles, panels and tables never carry a drop shadow. If it sits on the floor, it is separated by grout; only the modal and the drawer lift.", "section": "elevation" },
+      { "name": "The One Patterned Tile Rule", "body": "Exactly one element per screen carries the full pattern: the dashboard's Today's sales tile (pattern field on its right 30%), or a `.patterned` band (a 40px pattern strip under a 3px oxblood rule along the top of the page's main tile: the registration form, user account form, POS cart, report results tile (the band sits on a wrapper around a borderless table well, so the pattern stays outside the horizontal scroll), login tile at 96px, payroll's Net pay cell at 26px). A patterned element drops its quarter corner. A second full pattern on a screen is off-system.", "section": "shapes" },
+      { "name": "The Quarter Corner Rule", "body": "Every other panel, card, stat tile and POS product shows the quarter-motif in its top-right corner, and clears it with 44px of top padding so the heading sits beneath the corner rather than beside it.", "section": "shapes" }
+    ],
+    "dos": [
+      "**Do** separate tiles with the 4px grout joint (line-colour gap and border), not with spacing and shadow.",
+      "**Do** give every screen exactly one full-pattern element: the dashboard tile field or one `.patterned` band on the page's main tile.",
+      "**Do** put the quarter-motif corner on every other panel, card, stat tile and product, and give the panel 44px of top padding to clear it.",
+      "**Do** keep oxblood for the rail and primary action, ochre for today, focus and the selected item, slate for data.",
+      "**Do** set money and counts heavy (800) with proportional lining figures, right-aligned in tables.",
+      "**Do** keep controls at 44px minimum for touch.",
+      "**Do** respect reduced motion: all animation and transition are removed under `prefers-reduced-motion`."
+    ],
+    "donts": [
+      "**Don't** round corners past 3px on tiles, buttons, inputs or nav.",
+      "**Don't** put a drop shadow on any tile, panel or table; only the modal and drawer lift.",
+      "**Don't** use plain white as a panel surface; white is for input wells and hover lift.",
+      "**Don't** show the full pattern twice on one screen, or add a quarter corner to the patterned element.",
+      "**Don't** use tabular figures for money.",
+      "**Don't** add a second typeface."
+    ]
+  }
+}

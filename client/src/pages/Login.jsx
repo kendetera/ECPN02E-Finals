@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { LogIn } from 'lucide-react';
 import { useAuth } from '../auth.jsx';
 
 export default function Login() {
@@ -23,9 +24,11 @@ export default function Login() {
 
   return (
     <div className="login-page">
-      <form className="login-card" onSubmit={submit}>
-        <div className="brand big">ElectiveFinals</div>
-        <p className="muted">Sign in to continue</p>
+      <form className="login-tile patterned" onSubmit={submit}>
+        <div className="login-head">
+          <h1>Suki<b>Mart</b></h1>
+          <p>Store back office</p>
+        </div>
         <label className="field">
           <span>Username</span>
           <input value={username} onChange={(e) => setUsername(e.target.value)} autoComplete="username" autoFocus required />
@@ -34,8 +37,11 @@ export default function Login() {
           <span>Password</span>
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="current-password" required />
         </label>
-        {error && <p className="error">{error}</p>}
-        <button type="submit" disabled={busy}>{busy ? 'Signing in…' : 'Log in'}</button>
+        {error && <p className="error" role="alert">{error}</p>}
+        <button type="submit" className="btn primary block" disabled={busy}>
+          <LogIn size={18} aria-hidden="true" />
+          {busy ? 'Logging in…' : 'Log in'}
+        </button>
       </form>
     </div>
   );

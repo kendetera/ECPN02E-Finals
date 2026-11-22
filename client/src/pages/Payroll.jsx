@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { api, peso } from '../api.js';
 import Field from '../components/Field.jsx';
 import Modal from '../components/Modal.jsx';
+import PageHead from '../components/PageHead.jsx';
 
 const EMPTY = {};
 const n = (v) => Number(v) || 0;
@@ -44,7 +45,7 @@ export default function Payroll() {
 
   return (
     <section>
-      <h1>Payroll</h1>
+      <PageHead title="Payroll">Compute one employee's pay for a period. Gross and net pay update as you type.</PageHead>
       <form className="card form-grid" onSubmit={save}>
         <Field
           label="Employee"
@@ -66,7 +67,7 @@ export default function Payroll() {
           <div><span>Daily rate</span><strong>{peso(pay.rate)}</strong></div>
           <div><span>Gross pay</span><strong>{peso(pay.gross)}</strong></div>
           <div><span>Deductions</span><strong>{peso(pay.deductions)}</strong></div>
-          <div><span>Net pay</span><strong>{peso(pay.net)}</strong></div>
+          <div className="patterned"><span>Net pay</span><strong>{peso(pay.net)}</strong></div>
         </div>
 
         {error && <p className="error span-all">{error}</p>}

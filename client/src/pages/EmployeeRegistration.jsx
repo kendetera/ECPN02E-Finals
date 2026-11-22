@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { api } from '../api.js';
 import Field from '../components/Field.jsx';
 import Modal from '../components/Modal.jsx';
+import PageHead from '../components/PageHead.jsx';
 
 const EMPTY = { status: 'Active' };
 
@@ -34,8 +35,8 @@ export default function EmployeeRegistration() {
 
   return (
     <section>
-      <h1>Employee Registration</h1>
-      <form className="card form-grid" onSubmit={save}>
+      <PageHead title="Employee Registration">Add a new employee. Save stores the record; Cancel clears the form.</PageHead>
+      <form className="card form-grid patterned" onSubmit={save}>
         <Field label="First name" name="first_name" required {...f} />
         <Field label="Last name" name="last_name" required {...f} />
         <Field label="Birthdate" name="birthdate" type="date" {...f} />
