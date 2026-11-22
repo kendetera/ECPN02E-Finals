@@ -45,4 +45,11 @@ jobs:
             npm ci --omit=dev
             pm2 startOrReload ecosystem.config.cjs
             pm2 save
-            curl -fsS http://localhost:3000/api/health
+            # Give the app up to 30 s to start listening before checking it.
+            for i in $(seq 1 15); do
+              if curl -fsS http://localhost:3000/api/health; then echo; echo "Deploy OK"; exit 0; fi
+              sleep 2
+            done
+            echo "App did not answer on port 3000. Recent logs:"
+            pm2 logs ElectiveFinals --lines 40 --nostream
+            exit 1
