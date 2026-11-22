@@ -58,8 +58,7 @@ export default function Pos() {
           <h2>Cart</h2>
           {cart.length === 0 && <p className="muted cart-empty">No items yet. Tap a product to add it.</p>}
           {cart.map((i) => (
-            // keyed by quantity too, so a bumped line replays its "added" glow
-            <div key={`${i.name}-${i.quantity}`} className="cart-line">
+            <div key={i.name} className="cart-line">
               <span>{i.quantity} × {i.name}</span>
               <span className="num">{peso(i.price * i.quantity)}</span>
               <button className="icon-btn" onClick={() => remove(i.name)} aria-label={`Remove ${i.name}`}><X size={18} aria-hidden="true" /></button>

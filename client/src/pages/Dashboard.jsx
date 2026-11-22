@@ -80,7 +80,7 @@ export default function Dashboard() {
                 <div key={d?.date ?? i} className={`day${i === 6 ? ' today' : ''}`}>
                   <span className="day-amount">{d ? wholePeso(d.total) : ''}</span>
                   <div className="day-bar">
-                    {d && <i style={{ height: `${(d.total / max) * 100}%`, '--i': i }} />}
+                    {d && <i style={{ height: `${(d.total / max) * 100}%` }} />}
                   </div>
                   <span className="day-name">{d ? (i === 6 ? 'Today' : dayName(d.date)) : ''}</span>
                 </div>

@@ -52,9 +52,7 @@ export default function Layout() {
       {open && <div className="scrim" onClick={() => setOpen(false)} />}
 
       <main className="content">
-        <div key={location.pathname} className="page-enter">
-          <Outlet />
-        </div>
+        <Outlet />
       </main>
     </div>
   );
