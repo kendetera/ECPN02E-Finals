@@ -1,0 +1,11 @@
+node_modules/
+client/dist/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+*.pem
+
+# empty clone of the repo (not part of the project)
+ECPN02E-Finals/
